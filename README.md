@@ -1,10 +1,12 @@
 # The Legal Audit
 
-Netlify-ready React/Vite website for The Legal Audit.
+Netlify-ready React/Vite website.
 
-## Netlify settings
+## Adding a new episode
 
-- Build command: `npm run build`
-- Publish directory: `dist`
+Edit `src/content/episodes.js`. Increase `CURRENT_EPISODE_NUMBER` and add the new title, topic, summary and URL to `EPISODE_DETAILS`. Never renumber an existing episode.
 
-The included `netlify.toml` configures these settings automatically.
+## Netlify
+
+Build command: `npm run build`  
+Publish directory: `dist`
