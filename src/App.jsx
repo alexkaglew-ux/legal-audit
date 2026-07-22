@@ -60,7 +60,7 @@ url: "/blog/ep034-usmnt-pay-to-play-development.html",
 export default function App() {
 const [query, setQuery] = useState("");
 const [topic, setTopic] = useState("All");
-const topics = useMemo(() => ["All", ...new Set(hhepisodes.map(e => e.topic))], []);
+const topics = useMemo(() => ["All", ...new Set(episodes.map(e => e.topic))], []);
 const filtered = useMemo(() => episodes.filter(e => {
 const haystack = `${e.number} ${e.title} ${e.summary} ${e.topic}`.toLowerCase();
 return (topic === "All" || e.topic === topic) && haystack.includes(query.toLowerCase());
