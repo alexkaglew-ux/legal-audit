@@ -75,7 +75,7 @@ return <main>
 
 <section className="hero" id="top">
 <div className="hero-copy"><p className="eyebrow">SPORTS · ENTERTAINMENT · MEDIA LAW</p><h1>Alex Kagianaris,<br/><em>Esq.</em></h1><p className="hero-deck">Senior Associate at The Lew Firm APC, representing professional and collegiate athletes and entertainment businesses in contract, endorsement and licensing matters. Creator of <em>The Legal Audit</em>, his weekly breakdown of the deals shaping sports and entertainment.</p><div className="hero-actions"><a className="primary-button" href="#contact">Contact The Lew Firm <span>→</span></a><a className="text-link" href="#legal-audit">Watch The Legal Audit →</a></div></div>
-h<a className="hero-art" href="https://www.youtube.com/channel/UCawQ902E6uRDuF8RJO4oruA" target="_blank" rel="noreferrer"><img src="/alex-presents-legal-audit.png" alt="Alex Kagianaris presents The Legal Audit"/></a>
+<a className="hero-art" href="https://www.youtube.com/channel/UCawQ902E6uRDuF8RJO4oruA" target="_blank" rel="noreferrer"><img src="/alex-presents-legal-audit.png" alt="Alex Kagianaris presents The Legal Audit"/></a>
 <div className="issue-line"><span>EP{String(CURRENT_EPISODE_NUMBER).padStart(3,"0")}</span><span>LOS ANGELES · 2026</span></div>
 </section>
 
