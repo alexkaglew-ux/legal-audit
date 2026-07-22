@@ -125,7 +125,7 @@ h<a className="hero-art" href="https://www.youtube.com/channel/UCawQ902E6uRDuF8R
 <section className="archive section" id="archive"><div className="archive-head"><div><p className="eyebrow">THE RECORD</p><h2>Episode archive</h2></div><label className="search"><span>⌕</span><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Search episodes" aria-label="Search episodes"/></label></div><div className="filters">{topics.map(item=><button key={item} className={topic===item?"active":""} onClick={()=>setTopic(item)}>{item}</button>)}</div><div className="episode-list" aria-live="polite">{filtered.map(e=><article className="episode" key={e.number}><div className="episode-number">EP{e.number}</div><div><span className="topic">{e.topic}</span><h3>{e.title}</h3><p>{e.summary}</p></div><a className="episode-link" href={e.url} target="_blank" rel="noreferrer">WATCH ↗</a></article>)}{!filtered.length&&<p className="empty">No episodes match this search.</p>}</div><p className="archive-disclaimer">Commentary, not legal advice.</p></section>
 
 <section className="about section" id="about">
-<div className="monogram">AK</div>
+<img className="monogram" src="/headshot.png" alt="Alex Kagianaris, Esq."/>
 <div>
 <p className="eyebrow">ABOUT ALEX</p>
 <h2>Alex Kagianaris, Esq.</h2>
