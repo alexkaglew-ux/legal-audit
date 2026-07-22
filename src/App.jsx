@@ -60,7 +60,7 @@ url: "/blog/ep034-usmnt-pay-to-play-development.html",
 export default function App() {
 const [query, setQuery] = useState("");
 const [topic, setTopic] = useState("All");
-const topics = useMemo(() => ["All", ...new Set(episodes.map(e => e.topic))], []);
+const topics = useMemo(() => ["All", ...new Set(hhepisodes.map(e => e.topic))], []);
 const filtered = useMemo(() => episodes.filter(e => {
 const haystack = `${e.number} ${e.title} ${e.summary} ${e.topic}`.toLowerCase();
 return (topic === "All" || e.topic === topic) && haystack.includes(query.toLowerCase());
@@ -68,10 +68,9 @@ return (topic === "All" || e.topic === topic) && haystack.includes(query.toLower
 const latest = episodes[0];
 
 return <main>
-<header className="siteh-header">
+<header className="site-header">
 <a className="brand" href="#top"><span className="brand-mark">AK</span><span>ALEX KAGIANARIS</span></a>
 <nav aria-label="Primary navigation"><a href="#about">About Alex</a><a href="#legal-practice">Legal Practice</a><a href="#legal-audit">The Legal Audit</a><a href="#watch">Watch</a><a href="#articles">Articles</a><a href="#contact">Contact</a></nav>
-<a className="header-action" href="#contact">Contact The Lew Firm</a>
 </header>
 
 <section className="hero" id="top">
