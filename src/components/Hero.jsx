@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="hero" id="top">
+    <section className="hero hero-v2" id="top">
       <div className="hero-copy">
         <p className="eyebrow">SPORTS + NIL · ENTERTAINMENT · BUSINESS</p>
         <h1>
@@ -10,10 +10,8 @@ export default function Hero() {
         </h1>
         <p className="hero-firm-line">Senior Attorney, The Lew Firm APC</p>
         <p className="hero-deck">
-          Alex advises athletes, families, brands, and entertainment
-          businesses on the contracts, NIL deals, and rights issues that
-          shape their careers — and breaks down the mechanics publicly
-          through <em>The Legal Audit</em>.
+          Counsel for athletes, families, brands, and entertainment businesses navigating
+          contracts, NIL, licensing, and the business decisions around a career.
         </p>
         <div className="hero-actions">
           <a className="primary-button" href="mailto:ak@thelewfirm.com">
@@ -23,18 +21,25 @@ export default function Hero() {
             Explore Sports + NIL →
           </a>
         </div>
+        <div className="hero-proof" aria-label="Professional context">
+          <span>Attorney at The Lew Firm APC</span>
+          <span>Sports + NIL focus</span>
+          <span>Creator of The Legal Audit</span>
+        </div>
       </div>
-      <a
-        className="hero-art"
-        href="https://www.youtube.com/channel/UCawQ902E6uRDuF8RJO4oruA"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img src="/alex-presents-legal-audit.png" alt="Alex Kagianaris presents The Legal Audit" />
-      </a>
+      <div className="hero-art hero-art-v2" aria-hidden="true">
+        <div className="hero-image-frame">
+          <img src="/alex-presents-legal-audit.png" alt="" />
+        </div>
+        <div className="hero-caption">
+          <span>SPORTS LAW</span>
+          <span>NIL</span>
+          <span>ENTERTAINMENT</span>
+        </div>
+      </div>
       <div className="issue-line">
+        <span>LOS ANGELES</span>
         <span>THE LEW FIRM APC</span>
-        <span>LOS ANGELES · 2026</span>
       </div>
     </section>
   );
