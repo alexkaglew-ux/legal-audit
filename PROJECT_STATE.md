@@ -12,9 +12,10 @@ Primary audiences: athletes, parents/families, agents/advisors, brands, sports b
 - Source repo: alexkaglew-ux/legal-audit
 - Production branch: main
 - Working branch for v2: akesq-v2
-- Current implementation: React + Vite, largely single-page, with Legal Audit-led content architecture.
-- Existing content registry: src/content/episodes.js
+- Current implementation: React + Vite, with v2 componentized homepage work active on `akesq-v2`.
+- Existing content registry: src/content/episodes.js plus v2 content modules.
 - Existing Netlify form/newsletter implementation.
+- Live branch review URL: https://akesq-v2--alexkagianaris.netlify.app/
 
 ## Frozen decisions
 1. alexkagianaris.com is the target domain.
@@ -27,6 +28,7 @@ Primary audiences: athletes, parents/families, agents/advisors, brands, sports b
 8. Signature interaction: guided issue explorer, not a free-form legal-advice chatbot.
 9. Book and NIL course receive expansion slots now even if not yet launched.
 10. Production main stays untouched until preview acceptance.
+11. Review workflow: changes are pushed to `akesq-v2` and reviewed on the live Netlify branch deploy; Alex should review product stages, not act as relay between tools/builders.
 
 ## Working decisions
 - Homepage should act as attorney profile + live authority hub, not a Legal Audit landing page.
@@ -36,12 +38,14 @@ Primary audiences: athletes, parents/families, agents/advisors, brands, sports b
 
 ## Built / active work
 - Existing React/Vite site on main.
-- Netlify deploy pipeline.
+- Netlify deploy pipeline plus `akesq-v2` branch deploy.
+- v2 componentized homepage.
+- Guided Issue Explorer with Sports/NIL, athlete contracts, sports business, and film/entertainment paths; Greece path architected but not promoted.
 - Existing episode archive/search/filter UI.
 - YouTube playlist embed, Instagram/YouTube links, article cards, About, practice list, contact section, and Netlify newsletter form.
 
 ## Next milestone
-Milestone 1: Homepage + design system + Issue Explorer prototype on akesq-v2.
+Milestone 1: Finish homepage visual system + Issue Explorer polish on `akesq-v2`, then review live.
 
 Acceptance criteria:
 - Clear attorney-first hero and Lew Firm affiliation.
@@ -53,6 +57,7 @@ Acceptance criteria:
 - No change to production main.
 - Existing episode content remains available unless deliberately superseded.
 - Placeholders/invented content are clearly noted.
+- Live review build is available on the Netlify `akesq-v2` branch URL.
 
 ## Open decisions
 - Exact visual overlap with The Lew Firm after visual comparison.
@@ -64,7 +69,7 @@ Acceptance criteria:
 - Greece lane naming and promotion threshold.
 
 ## Gaps
-- Need full visual/design audit of thelewfirm.com for reusable design DNA.
+- Need final visual/design audit of thelewfirm.com for reusable design DNA.
 - Need authoritative current biography and admissions/credentials check before final copy freeze.
 - Need preferred headshot/portrait selection.
 - Need Substack/newsletter endpoint.
@@ -75,10 +80,10 @@ Acceptance criteria:
 - Any Greece copy before evidence pack is provisional and must be labeled as an emerging focus rather than established market leadership.
 
 ## Build ownership
-- Architecture/copy/integration: ChatGPT.
-- Primary builder: Claude Code.
-- Cursor: only for local inspection/debugging/visual iteration if faster than builder loop.
-- Independent review: ChatGPT at material milestone; one technical reviewer only if needed before release candidate.
+- Architecture, copy, implementation, integration, and current primary build ownership: ChatGPT.
+- Claude Code: no longer primary builder; available only for independent review or difficult debugging if deliberately requested.
+- Cursor: only for local inspection/debugging/visual iteration if faster than direct build workflow.
+- Independent review before release candidate: one reviewer only if warranted.
 
 ## Team boundary
 Do not import state from Sports Legal Audit, HITL, TOKEN/CONTROL-CORE, TRUEFIELD, NIL Course, or the Sports Law Book except deliberately approved assets/patterns.
