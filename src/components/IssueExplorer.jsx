@@ -46,14 +46,13 @@ export default function IssueExplorer() {
   return (
     <section className="issue-explorer section" id="issue-explorer" aria-labelledby="explorer-heading">
       <div className="section-kicker">
-        <span>Signature interaction</span>
-        <span>GUIDED, NOT AI</span>
+        <span>Explore the issue</span>
+        <span>SPORTS · NIL · ENTERTAINMENT</span>
       </div>
       <h2 id="explorer-heading">What are you trying to understand?</h2>
       <p className="explorer-deck">
-        Answer a couple of questions to see the general issues that usually
-        matter and where to start. This is educational navigation, not
-        individualized legal advice.
+        Choose a topic, tell us where you fit, and see the questions that may matter and the resources
+        that can help you get oriented. This is educational information, not individualized legal advice.
       </p>
 
       <ol className="explorer-steps" aria-label="Explorer progress">
@@ -132,7 +131,7 @@ export default function IssueExplorer() {
 
             {issue.whatMatters.length > 0 && (
               <div className="explorer-result-block">
-                <p className="explorer-result-label">What usually matters</p>
+                <p className="explorer-result-label">Questions that may matter</p>
                 <ul>
                   {issue.whatMatters.map((point) => (
                     <li key={point}>{point}</li>
@@ -157,7 +156,7 @@ export default function IssueExplorer() {
             )}
 
             <div className="explorer-result-block explorer-cta-block">
-              <p className="explorer-result-label">This may warrant individual legal advice</p>
+              <p className="explorer-result-label">Want to discuss your specific situation?</p>
               <p className="explorer-contact-note">{ISSUE_EXPLORER_CONTACT_NOTE}</p>
               <a className="primary-button" href="mailto:ak@thelewfirm.com">
                 Contact Alex <span>→</span>
