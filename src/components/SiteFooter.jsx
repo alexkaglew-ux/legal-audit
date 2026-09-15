@@ -11,6 +11,24 @@ const SOCIALS = [
 export default function SiteFooter() {
   return (
     <footer>
+      <div className="footer-newsletter">
+        <p className="footer-newsletter-label">Get new analysis by email</p>
+        <form
+          className="footer-newsletter-form"
+          name="get-the-brief"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/thank-you.html"
+        >
+          <input type="hidden" name="form-name" value="get-the-brief" />
+          <p hidden>
+            <input name="bot-field" />
+          </p>
+          <input type="email" name="email" required placeholder="Email address" aria-label="Email address" />
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
       <div className="footer-top">
         <a className="brand" href="#top">
           <span className="brand-mark">AK</span>
