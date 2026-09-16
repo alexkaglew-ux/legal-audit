@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { ISSUE_EXPLORER_PATHS, ISSUE_EXPLORER_CONTACT_NOTE } from "../content/issueExplorer.js";
 const PROMOTED_PATHS = ISSUE_EXPLORER_PATHS.filter((p) => p.promoted);
 export default function IssueExplorer(){
@@ -8,6 +8,11 @@ export default function IssueExplorer(){
  const reset=()=>{setPathId(null);setPersonaId(null);setIssueId(null)};
  const selectPath=id=>{setPathId(id);setPersonaId(null);setIssueId(null)};
  const selectPersona=id=>{setPersonaId(id);setIssueId(null)};
+ useEffect(()=>{
+   const handleOpen=(event)=>{ if(event.detail?.topic) selectPath(event.detail.topic); };
+   window.addEventListener("standing:open",handleOpen);
+   return()=>window.removeEventListener("standing:open",handleOpen);
+ },[]);
  const step=!path?1:!personaId?2:3;
  return <section className="issue-explorer section" id="issue-explorer" aria-labelledby="explorer-heading">
    <div className="explorer-intro"><h2 className="eyebrow" id="explorer-heading">FIND YOUR STANDING</h2><p className="explorer-deck">Choose your world and situation to see the legal questions and resources that may matter. Educational information, not individualized legal advice.</p></div>
