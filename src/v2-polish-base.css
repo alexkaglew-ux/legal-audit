@@ -1,5 +1,5 @@
 @import url('./styles.css');
 
-/* Compatibility layer. Existing v2 component styling is supplied by styles.css; the new first-screen layer in v2-polish.css overrides the hero. */
-:root{--navy:#101820;--navy-2:#17222c;--cream:#f3efe6;--cream-2:#e8e1d5;--accent:#d8ad35;--steel:#93a0aa;--hair:rgba(243,239,230,.16)}
-body{background:var(--navy);color:var(--cream)}
+/* AKESQ v2 palette: quiet editorial slate, warm paper and restrained blue. */
+:root{--navy:#26343f;--navy-2:#344651;--cream:#f6f4ef;--cream-2:#ebe8e1;--accent:#6f8797;--steel:#7d8b93;--hair:rgba(38,52,63,.16)}
+body{background:#eef0ef;color:#26343f}
