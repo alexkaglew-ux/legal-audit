@@ -1,9 +1,9 @@
 const NAV_LINKS = [
-  ["Sports + NIL", "#sports-nil"],
-  ["Entertainment", "#issue-explorer"],
+  ["The Practice", "#practice"],
+  ["Right Now", "#watching"],
+  ["Find Your Issue", "#issue-explorer"],
   ["Insights", "#insights"],
   ["About", "#about"],
-  ["Books + Education", "#books-education"],
   ["Contact", "#contact"],
 ];
 
@@ -12,23 +12,12 @@ export default function SiteHeader() {
     <header className="site-header">
       <a className="brand" href="#top">
         <span className="brand-mark">AK</span>
-        <span>ALEX KAGIANARIS</span>
+        <span className="brand-copy"><b>ALEX KAGIANARIS, ESQ.</b><small>SENIOR ATTORNEY · THE LEW FIRM APC</small></span>
       </a>
       <nav aria-label="Primary navigation">
-        {NAV_LINKS.map(([label, href]) => (
-          <a key={href} href={href}>
-            {label}
-          </a>
-        ))}
+        {NAV_LINKS.map(([label, href]) => <a key={href} href={href}>{label}</a>)}
       </nav>
-      <a
-        className="header-action firm-utility-link"
-        href="https://thelewfirm.com"
-        target="_blank"
-        rel="noreferrer"
-      >
-        The Lew Firm ↗
-      </a>
+      <a className="header-action firm-utility-link" href="https://thelewfirm.com" target="_blank" rel="noreferrer">The Lew Firm ↗</a>
     </header>
   );
 }
