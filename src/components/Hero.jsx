@@ -1,8 +1,14 @@
 const LANES = [
-  { n: "01", title: "SPORTS + NIL", copy: "Athletes, college sports, representation, rights and the rules changing the game.", href: "#issue-explorer" },
-  { n: "02", title: "ENTERTAINMENT", copy: "Music, television, film, talent, production and the agreements behind creative work.", href: "#practice" },
+  { n: "01", title: "SPORTS + NIL", copy: "Athletes, college sports, representation, rights and the rules changing the game.", topic: "sports-nil" },
+  { n: "02", title: "ENTERTAINMENT", copy: "Music, television, film, talent, production and the agreements behind creative work.", topic: "film-entertainment" },
   { n: "03", title: "IDEAS", copy: "Legal developments, analysis and the questions shaping sports and entertainment right now.", href: "#insights" },
 ];
+
+function openLane(lane) {
+  if (!lane.topic) return;
+  window.dispatchEvent(new CustomEvent("standing:open", { detail: { topic: lane.topic } }));
+  document.getElementById("issue-explorer")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
 
 export default function Hero() {
   return (
@@ -15,13 +21,14 @@ export default function Hero() {
         </div>
         <a className="hero-contact" href="mailto:ak@thelewfirm.com">CONTACT ALEX <span>↗</span></a>
       </div>
-      <div className="hero-lanes" aria-label="Explore Alex Kagianaris, Esq.'s work">
-        {LANES.map((lane) => (
+      <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s work">
+        {LANES.map((lane) => lane.topic ? (
+          <button className="hero-lane" type="button" onClick={() => openLane(lane)} key={lane.n}>
+            <span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p><i>↘</i>
+          </button>
+        ) : (
           <a className="hero-lane" href={lane.href} key={lane.n}>
-            <span className="hero-lane-number">{lane.n}</span>
-            <strong>{lane.title}</strong>
-            <p>{lane.copy}</p>
-            <i>↘</i>
+            <span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p><i>↘</i>
           </a>
         ))}
       </div>
