@@ -4,15 +4,13 @@ export default function SportsNilSection() {
   return (
     <section className="sports-nil section sports-nil-v2" id="sports-nil" aria-labelledby="sports-nil-heading">
       <div className="section-kicker">
-        <span>Core practice</span>
+        <span>Practice focus</span>
         <span>SPORTS + NIL</span>
       </div>
       <div className="sports-nil-intro-grid">
-        <h2 id="sports-nil-heading">Sports law is the center of the practice.</h2>
+        <h2 id="sports-nil-heading">Building the next generation of athlete-side practice.</h2>
         <p className="sports-nil-deck">
-          Alex works with athletes, families, advisors, brands, and sports businesses on the
-          agreements and decisions that shape careers — with particular emphasis on NIL,
-          representation, endorsements, licensing, and athlete-side business matters.
+          Sports + NIL is a growing focus within Alex's broader sports and entertainment practice. The work centers on the agreements, rules, leverage, and business decisions surrounding athletes and their careers — alongside an established practice in music, television, and film.
         </p>
       </div>
       <div className="sports-nil-grid">
