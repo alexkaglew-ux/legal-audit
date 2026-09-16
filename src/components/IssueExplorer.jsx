@@ -10,7 +10,7 @@ export default function IssueExplorer(){
  const selectPersona=id=>{setPersonaId(id);setIssueId(null)};
  const step=!path?1:!personaId?2:3;
  return <section className="issue-explorer section" id="issue-explorer" aria-labelledby="explorer-heading">
-   <div className="explorer-intro"><p className="eyebrow">FIND YOUR STANDING</p><h2 id="explorer-heading">Where do you stand?</h2><p className="explorer-deck">Start with your world and your situation. See the legal questions and resources that may matter. Educational information, not individualized legal advice.</p></div>
+   <div className="explorer-intro"><h2 className="eyebrow" id="explorer-heading">FIND YOUR STANDING</h2><p className="explorer-deck">Choose your world and situation to see the legal questions and resources that may matter. Educational information, not individualized legal advice.</p></div>
    <div className="explorer-workspace">
    <ol className="explorer-steps" aria-label="Explorer progress"><li className={step>=1?'done':''}>01 Topic</li><li className={step>=2?'done':''}>02 Who you are</li><li className={step>=3?'done':''}>03 Situation</li></ol>
    <div className="explorer-panel" aria-live="polite">
