@@ -1,6 +1,5 @@
 const NAV_LINKS = [
   ["The Practice", "#practice"],
-  ["Right Now", "#watching"],
   ["Find Your Standing", "#issue-explorer"],
   ["Insights", "#insights"],
   ["About", "#about"],
