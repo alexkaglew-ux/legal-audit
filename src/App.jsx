@@ -1,6 +1,7 @@
 import SiteHeader from "./components/SiteHeader.jsx";
 import Hero from "./components/Hero.jsx";
 import WorldNav from "./components/WorldNav.jsx";
+import PracticeWorlds from "./components/PracticeWorlds.jsx";
 import WatchingRail from "./components/WatchingRail.jsx";
 import SportsNilSection from "./components/SportsNilSection.jsx";
 import IssueExplorer from "./components/IssueExplorer.jsx";
@@ -17,6 +18,7 @@ export default function App() {
       <SiteHeader />
       <Hero />
       <WorldNav />
+      <PracticeWorlds />
       <SportsNilSection />
       <WatchingRail />
       <IssueExplorer />
