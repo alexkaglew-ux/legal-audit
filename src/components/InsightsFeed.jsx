@@ -1,34 +1,21 @@
-import { useMemo, useState } from "react";
-import { LATEST_ANALYSIS } from "../content/insights.js";
-
-const FORMAT_LABEL = { video: "Video", article: "Writing", linkedin: "Social", newsletter: "Newsletter" };
+const ITEMS = [
+  { type: "THE TAKE", topic: "GAMBLING", title: "The Bettor Isn't the Licensee. That's Why the Review Is of FanDuel.", deck: "Massachusetts puts the proxy-betting duty on the operator — and that placement decides who is exposed.", url: "https://sportslegalaudit.com/latest/proxy-betting-regulatory-exposure/" },
+  { type: "THE AUDIT", topic: "NIL", title: "LSU's Roster Costs Twice the Cap. Both Numbers Are Real.", deck: "The House settlement created an enforceable cap and an unlimited second track running beside it.", url: "https://sportslegalaudit.com/latest/lsu-nil-cap-paradox/" },
+  { type: "NIL", topic: "COLLEGE SPORTS", title: "What an Associated Entity Is, and Why It Decides Everything", deck: "A practical explanation of one of the rules shaping NIL agreements after House.", url: "https://sportslegalaudit.com/clause/what-is-an-associated-entity/" },
+  { type: "THE CLAUSE", topic: "CONTRACT", title: "What Does ‘Guaranteed’ Actually Mean in a Pro Contract?", deck: "Guaranteed usually means guaranteed against specific events — not necessarily everything.", url: "https://sportslegalaudit.com/clause/" },
+];
 
 export default function InsightsFeed() {
-  const [format, setFormat] = useState("All");
-  const formats = ["All", ...new Set(LATEST_ANALYSIS.map((item) => FORMAT_LABEL[item.format] || item.format))];
-  const visible = useMemo(() => LATEST_ANALYSIS.filter((item) => format === "All" || (FORMAT_LABEL[item.format] || item.format) === format), [format]);
-
   return (
     <section className="insights section" id="insights" aria-labelledby="insights-heading">
-      <div className="section-kicker">
-        <span id="insights-heading">Ideas + analysis</span>
-        <span>ACROSS MEDIUMS</span>
+      <div className="insights-compact-head">
+        <div><p className="eyebrow" id="insights-heading">IDEAS + ANALYSIS</p><p>Selected work from <a href="https://sportslegalaudit.com" target="_blank" rel="noreferrer">Sports Legal Audit ↗</a></p></div>
+        <a className="text-link" href="https://sportslegalaudit.com/latest/" target="_blank" rel="noreferrer">View all →</a>
       </div>
-      <div className="insights-heading-row">
-        <h2>One point of view.<br />Different formats.</h2>
-        <div className="medium-filters" aria-label="Filter analysis by format">
-          {formats.map((item) => <button type="button" key={item} className={format === item ? "active" : ""} onClick={() => setFormat(item)}>{item}</button>)}
-        </div>
+      <div className="sla-strip">
+        {ITEMS.map((item) => <a className="sla-item" key={item.type} href={item.url} target="_blank" rel="noreferrer"><span>{item.type} · {item.topic}</span><h3>{item.title}</h3><p>{item.deck}</p><i>Read →</i></a>)}
+        <a className="sla-item sla-video" href="https://youtu.be/7HKGO-oPggg" target="_blank" rel="noreferrer"><span>VIDEO</span><div className="video-mark" aria-hidden="true">▶</div><h3>Watch the latest video analysis</h3><i>Watch →</i></a>
       </div>
-      <div className="insights-grid" aria-live="polite">
-        {visible.map((item) => (
-          <a className={`insight-card${item.featured ? " featured" : ""}`} key={item.id} href={item.url} target={item.url.startsWith("http") ? "_blank" : undefined} rel="noreferrer">
-            <div className="insight-card-meta"><span className="topic">{item.topic}</span><span className="insight-format">{FORMAT_LABEL[item.format] || item.format}</span></div>
-            <h3>{item.title}</h3><p>{item.summary}</p><b>{item.source} →</b>
-          </a>
-        ))}
-      </div>
-      <a className="text-link" href="/blog/">Explore all analysis →</a>
     </section>
   );
 }
