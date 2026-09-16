@@ -1,0 +1,5 @@
+@import url('./styles.css');
+
+/* Compatibility layer. Existing v2 component styling is supplied by styles.css; the new first-screen layer in v2-polish.css overrides the hero. */
+:root{--navy:#101820;--navy-2:#17222c;--cream:#f3efe6;--cream-2:#e8e1d5;--accent:#d8ad35;--steel:#93a0aa;--hair:rgba(243,239,230,.16)}
+body{background:var(--navy);color:var(--cream)}
