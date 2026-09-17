@@ -5,4 +5,5 @@ import "./styles.css";
 import "./v2-polish.css";
 import "./lew-palette.css";
 import "./beyond-practice.css";
+import "./practice-detail.css";
 ReactDOM.createRoot(document.getElementById("root")).render(<React.StrictMode><App /></React.StrictMode>);
