@@ -17,9 +17,8 @@ function StrategyGraph({type}){
 export default function BeyondPractice(){
  const [open,setOpen]=useState(null);
  return <section className="beyond-practice section" id="beyond-practice" aria-labelledby="beyond-heading">
-  <div className="beyond-intro beyond-intro--compact section-intro-row">
+  <div className="beyond-intro beyond-intro--compact section-intro-row section-intro-row--label-only">
     <div className="section-intro-label"><p className="eyebrow" id="beyond-heading">BEYOND THE PRACTICE</p><span /></div>
-    <p className="beyond-one-line">I bring a legal, business and creative lens to help clients turn opportunity into durable value.</p>
     <a className="beyond-contact" href="mailto:ak@thelewfirm.com">WORK WITH ALEX <span>↗</span></a>
   </div>
   <div className="beyond-grid">{SERVICES.map((s,i)=><button type="button" className={`beyond-world ${open===i?"is-open":""}`} key={s.n} onClick={()=>setOpen(open===i?null:i)} aria-expanded={open===i}><span>{s.n}</span><p className="beyond-role">{s.title}</p><p>{s.copy}</p><small>{s.detail}</small><b className="beyond-toggle">{open===i?"−":"+"}</b></button>)}</div>
