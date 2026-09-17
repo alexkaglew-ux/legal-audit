@@ -13,17 +13,18 @@ html,body,#root,body,main{background:#0d2230!important;color:var(--ivory)!import
 .site-header{background:rgba(13,34,48,.98)!important}
 footer{background:#081923!important}
 
-/* Practice panels: three clearly different blues, never light-on-light and no aqua/green. */
-.hero-lanes .hero-lane{color:#f4efe6!important;border-color:rgba(244,239,230,.28)!important}
-.hero-lanes .hero-lane:nth-child(1){background:#173b56!important}
-.hero-lanes .hero-lane:nth-child(2){background:#22517a!important}
-.hero-lanes .hero-lane:nth-child(3){background:#326a9b!important}
+/* Cinematic practice panels: blue-toned photography under a navy veil. */
+.hero-lanes .hero-lane{color:#f4efe6!important;border-color:rgba(244,239,230,.32)!important;background-color:#173b56!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;text-shadow:0 1px 12px rgba(4,14,22,.55)}
+.hero-lanes .hero-lane:nth-child(1){background-image:linear-gradient(90deg,rgba(8,25,35,.88),rgba(23,59,86,.58)),url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1400&q=82')!important}
+.hero-lanes .hero-lane:nth-child(2){background-image:linear-gradient(90deg,rgba(8,25,35,.88),rgba(34,81,122,.52)),url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1400&q=82')!important}
+.hero-lanes .hero-lane:nth-child(3){background-image:linear-gradient(90deg,rgba(8,25,35,.86),rgba(50,106,155,.48)),url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1400&q=82')!important}
 .hero-lanes .hero-lane strong{color:#f4efe6!important}
-.hero-lanes .hero-lane p{color:rgba(244,239,230,.88)!important}
+.hero-lanes .hero-lane p{color:rgba(244,239,230,.94)!important}
 .hero-lanes .hero-lane .hero-lane-number{color:#d2bea0!important}
-.hero-lanes .hero-lane i{color:#f4efe6!important;border-color:#d2bea0!important}
-.hero-lanes .hero-lane:hover{background:#d2bea0!important;color:#081923!important}
-.hero-lanes .hero-lane:hover strong,.hero-lanes .hero-lane:hover p,.hero-lanes .hero-lane:hover .hero-lane-number,.hero-lanes .hero-lane:hover i{color:#081923!important}
-.hero-lanes .hero-lane:hover i{border-color:#081923!important}
+.hero-lanes .hero-lane i{color:#f4efe6!important;border-color:#d2bea0!important;background:rgba(8,25,35,.24)}
+.hero-lanes .hero-lane:hover{background-blend-mode:normal!important;filter:brightness(1.08)}
+.hero-lanes .hero-lane:hover strong,.hero-lanes .hero-lane:hover p{color:#fffaf0!important}
+.hero-lanes .hero-lane:hover .hero-lane-number,.hero-lanes .hero-lane:hover i{color:#e8dcc9!important}
+.hero-lanes .hero-lane:hover i{border-color:#e8dcc9!important;background:rgba(8,25,35,.52)}
 
 .practice-world-tabs button:hover,.practice-world-tabs button.active,.explorer-option-card:hover,.sla-item:hover,.beyond-world:hover{background:#142f40!important;color:var(--ivory)!important}
