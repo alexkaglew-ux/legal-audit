@@ -1,15 +1,29 @@
+import { useState } from "react";
+
 const SERVICES = [
-  { n:"01", title:"STRUCTURE THE OPPORTUNITY", copy:"Identify the right deals, partners and structures across commercial rights, media / IP and emerging opportunities.", detail:"FROM OPPORTUNITY TO ENTERPRISE" },
-  { n:"02", title:"NEGOTIATE + PROTECT", copy:"Look beyond headline economics to the rights being granted, retained or restricted — and how today's deal affects the next one.", detail:"RIGHTS THAT LAST" },
-  { n:"03", title:"BUILD BEYOND THE DEAL", copy:"Align contracts, ownership and business strategy so individual transactions can contribute to durable long-term value.", detail:"STRUCTURE BEFORE SCALE" },
-  { n:"04", title:"NAVIGATE WHAT'S NEXT", copy:"Spot emerging issues across NIL, digital rights, AI, media, data and new business models before they become avoidable roadblocks.", detail:"SEE THE NEXT ISSUE EARLY" },
+  { n:"01", title:"STRUCTURE THE OPPORTUNITY", copy:"Identify the right deals, partners and structures across commercial rights, media / IP and emerging opportunities.", detail:"FROM OPPORTUNITY TO ENTERPRISE", graph:"layers" },
+  { n:"02", title:"NEGOTIATE + PROTECT", copy:"Look beyond headline economics to the rights being granted, retained or restricted — and how today's deal affects the next one.", detail:"RIGHTS THAT LAST", graph:"matrix" },
+  { n:"03", title:"BUILD BEYOND THE DEAL", copy:"Align contracts, ownership and business strategy so individual transactions can contribute to durable long-term value.", detail:"STRUCTURE BEFORE SCALE", graph:"team" },
+  { n:"04", title:"NAVIGATE WHAT'S NEXT", copy:"Spot emerging issues across NIL, digital rights, AI, media, data and new business models before they become avoidable roadblocks.", detail:"SEE THE NEXT ISSUE EARLY", graph:"progression" },
 ];
-export default function BeyondPractice(){return <section className="beyond-practice section" id="beyond-practice" aria-labelledby="beyond-heading">
+
+function StrategyGraph({type}){
+ if(type==="layers") return <div className="strategy-graph strategy-layers"><p className="graph-kicker">STRUCTURE BEFORE SCALE</p><div className="layer"><b>RIGHTS LAYER</b><span>NIL / likeness · Content / IP · Data · Trademarks · Contractual rights</span></div><div className="graph-arrow">↓</div><div className="layer"><b>TRANSACTION LAYER</b><span>Endorsements · Licensing · Media · Advisor agreements · Equity</span></div><div className="graph-arrow">↓</div><div className="layer"><b>OWNERSHIP LAYER</b><span>Cash · IP · Audience · Equity · Long-term enterprise value</span></div><p className="graph-question">Every transaction asks: <strong>What are you giving?</strong> <strong>What do you retain?</strong></p></div>;
+ if(type==="matrix") return <div className="strategy-graph"><p className="graph-kicker">NOT ALL REVENUE IS EQUAL</p><div className="rights-matrix"><span className="matrix-y">ECONOMICS ↑</span><div className="matrix-cell priority"><b>PRIORITY</b><small>High economics<br/>Low rights cost</small></div><div className="matrix-cell negotiate"><b>NEGOTIATE</b><small>High economics<br/>High rights cost</small></div><div className="matrix-cell selective"><b>SELECTIVE</b><small>Low economics<br/>Low rights cost</small></div><div className="matrix-cell decline"><b>DECLINE</b><small>Low economics<br/>High rights cost</small></div><span className="matrix-x">RIGHTS COST →</span></div><p className="graph-foot">Rights cost can include exclusivity, term, content ownership, AI use, sublicensing, data rights and post-term control.</p></div>;
+ if(type==="team") return <div className="strategy-graph"><p className="graph-kicker">HOW WE WORK TOGETHER</p><div className="team-map"><div className="team-node"><b>CLIENT + MANAGEMENT</b><span>Day-to-day decisions<br/>Career direction<br/>Personal advisors</span></div><div className="team-center">WORKING<br/><strong>TOGETHER</strong></div><div className="team-node"><b>THE LEW FIRM</b><span>Legal expertise<br/>Transaction structuring<br/>Industry network</span></div></div><div className="team-support"><b>SUPPORT ACROSS THE CAREER</b><span>Agreements · Licensing · Media / IP · Technology · Equity · Entity coordination</span></div><div className="team-network"><b>NETWORK</b><span>Agent · Business manager · Tax counsel · Financial advisor · Production · PR · Technology</span></div></div>;
+ return <div className="strategy-graph"><p className="graph-kicker">FROM ENDORSER TO STRATEGIC COUNTERPARTY</p><div className="progression"><div><span>01</span><b>ENDORSEMENT</b><small>Promote a product<br/><em>Cash</em></small></div><i>→</i><div><span>02</span><b>ADVISOR</b><small>Testing + feedback<br/><em>Cash + equity where justified</em></small></div><i>→</i><div><span>03</span><b>CONTRIBUTOR</b><small>Product / IP contribution<br/><em>Ownership + IP / data terms</em></small></div></div><p className="graph-foot">The legal questions change as the relationship deepens: contribution, ownership, data, likeness, vesting, dilution and post-term rights.</p></div>;
+}
+
+export default function BeyondPractice(){
+ const [open,setOpen]=useState(null);
+ return <section className="beyond-practice section" id="beyond-practice" aria-labelledby="beyond-heading">
   <div className="beyond-intro beyond-intro--compact section-intro-row">
     <div className="section-intro-label"><p className="eyebrow" id="beyond-heading">BEYOND THE PRACTICE</p><span /></div>
     <p className="beyond-one-line">I bring a legal, business and creative lens to help clients turn opportunity into durable value.</p>
     <a className="beyond-contact" href="mailto:ak@thelewfirm.com">WORK WITH ALEX <span>↗</span></a>
   </div>
-  <div className="beyond-grid">{SERVICES.map(s=><article className="beyond-world" key={s.n}><span>{s.n}</span><p className="beyond-role">{s.title}</p><p>{s.copy}</p><small>{s.detail}</small></article>)}</div>
-  <div className="beyond-thesis"><span>THE THROUGH-LINE</span><p>What are you giving? What do you retain? What does this decision make possible next?</p></div>
-</section>}
+  <div className="beyond-grid">{SERVICES.map((s,i)=><button type="button" className={`beyond-world ${open===i?"is-open":""}`} key={s.n} onClick={()=>setOpen(open===i?null:i)} aria-expanded={open===i}><span>{s.n}</span><p className="beyond-role">{s.title}</p><p>{s.copy}</p><small>{s.detail}</small><b className="beyond-toggle">{open===i?"−":"+"}</b></button>)}</div>
+  {open!==null&&<div className="strategy-panel"><button type="button" className="strategy-close" onClick={()=>setOpen(null)}>CLOSE ×</button><StrategyGraph type={SERVICES[open].graph}/></div>}
+  <div className="beyond-thesis"><span>THE THROUGH-LINE</span><p>The Lew Firm supports the artist/athlete and their management team at every stage, using our legal expertise and network so each transaction works with the ones that come after it.</p></div>
+ </section>
+}
