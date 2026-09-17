@@ -1,4 +1,5 @@
 import SiteHeader from "./components/SiteHeader.jsx";
+import IdentityLayer from "./components/IdentityLayer.jsx";
 import Hero from "./components/Hero.jsx";
 import PracticeDetail from "./components/PracticeDetail.jsx";
 import BeyondPractice from "./components/BeyondPractice.jsx";
@@ -8,4 +9,4 @@ import AboutPreview from "./components/AboutPreview.jsx";
 import BooksEducation from "./components/BooksEducation.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
-export default function App(){return <main><SiteHeader/><Hero/><PracticeDetail/><BeyondPractice/><IssueExplorer/><InsightsFeed/><AboutPreview/><BooksEducation/><ContactSection/><SiteFooter/></main>}
+export default function App(){return <main><SiteHeader/><IdentityLayer/><Hero/><PracticeDetail/><BeyondPractice/><IssueExplorer/><InsightsFeed/><AboutPreview/><BooksEducation/><ContactSection/><SiteFooter/></main>}
