@@ -24,6 +24,6 @@ export default function BeyondPractice(){
   </div>
   <div className="beyond-grid">{SERVICES.map((s,i)=><button type="button" className={`beyond-world ${open===i?"is-open":""}`} key={s.n} onClick={()=>setOpen(open===i?null:i)} aria-expanded={open===i}><span>{s.n}</span><p className="beyond-role">{s.title}</p><p>{s.copy}</p><small>{s.detail}</small><b className="beyond-toggle">{open===i?"−":"+"}</b></button>)}</div>
   {open!==null&&<div className="strategy-panel"><button type="button" className="strategy-close" onClick={()=>setOpen(null)}>CLOSE ×</button><StrategyGraph type={SERVICES[open].graph}/></div>}
-  <div className="beyond-thesis"><span>THE THROUGH-LINE</span><p>The Lew Firm supports the artist/athlete and their management team at every stage, using our legal expertise and network so each transaction works with the ones that come after it.</p></div>
+  <div className="beyond-thesis"><p>The Lew Firm supports the artist/athlete and their management team at every stage, using our legal expertise and network so each transaction works with the ones that come after it.</p></div>
  </section>
 }
