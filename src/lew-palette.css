@@ -11,5 +11,19 @@
 html,body,#root,body,main{background:#0d2230!important;color:var(--ivory)!important}
 .section,.hero-cinematic{background:#0d2230!important}
 .site-header{background:rgba(13,34,48,.98)!important}
-.hero-lane:hover,.practice-world-tabs button:hover,.practice-world-tabs button.active,.explorer-option-card:hover,.sla-item:hover,.beyond-world:hover{background:#142f40!important;color:var(--ivory)!important}
 footer{background:#081923!important}
+
+/* Practice panels: three clearly different blues, never light-on-light and no aqua/green. */
+.hero-lanes .hero-lane{color:#f4efe6!important;border-color:rgba(244,239,230,.28)!important}
+.hero-lanes .hero-lane:nth-child(1){background:#173b56!important}
+.hero-lanes .hero-lane:nth-child(2){background:#22517a!important}
+.hero-lanes .hero-lane:nth-child(3){background:#326a9b!important}
+.hero-lanes .hero-lane strong{color:#f4efe6!important}
+.hero-lanes .hero-lane p{color:rgba(244,239,230,.88)!important}
+.hero-lanes .hero-lane .hero-lane-number{color:#d2bea0!important}
+.hero-lanes .hero-lane i{color:#f4efe6!important;border-color:#d2bea0!important}
+.hero-lanes .hero-lane:hover{background:#d2bea0!important;color:#081923!important}
+.hero-lanes .hero-lane:hover strong,.hero-lanes .hero-lane:hover p,.hero-lanes .hero-lane:hover .hero-lane-number,.hero-lanes .hero-lane:hover i{color:#081923!important}
+.hero-lanes .hero-lane:hover i{border-color:#081923!important}
+
+.practice-world-tabs button:hover,.practice-world-tabs button.active,.explorer-option-card:hover,.sla-item:hover,.beyond-world:hover{background:#142f40!important;color:var(--ivory)!important}
