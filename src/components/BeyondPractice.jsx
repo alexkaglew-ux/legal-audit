@@ -1,11 +1,19 @@
 import { useState } from "react";
 
 const SERVICES = [
-  { n:"01", title:"STRUCTURE THE OPPORTUNITY", copy:"Identify the right deals, partners and structures across commercial rights, media / IP and emerging opportunities.", detail:"FROM OPPORTUNITY TO ENTERPRISE", graph:"layers" },
-  { n:"02", title:"NEGOTIATE + PROTECT", copy:"Look beyond headline economics to the rights being granted, retained or restricted — and how today's deal affects the next one.", detail:"RIGHTS THAT LAST", graph:"matrix" },
-  { n:"03", title:"BUILD BEYOND THE DEAL", copy:"Align contracts, ownership and business strategy so individual transactions can contribute to durable long-term value.", detail:"STRUCTURE BEFORE SCALE", graph:"team" },
-  { n:"04", title:"NAVIGATE WHAT'S NEXT", copy:"Spot emerging issues across NIL, digital rights, AI, media, data and new business models before they become avoidable roadblocks.", detail:"SEE THE NEXT ISSUE EARLY", graph:"progression" },
+  { n:"01", title:"STRUCTURE THE OPPORTUNITY", copy:"Identify the right deals, partners and structures across commercial rights, media / IP and emerging opportunities.", detail:"FROM OPPORTUNITY TO ENTERPRISE", graph:"layers", icon:"layers" },
+  { n:"02", title:"NEGOTIATE + PROTECT", copy:"Look beyond headline economics to the rights being granted, retained or restricted — and how today's deal affects the next one.", detail:"RIGHTS THAT LAST", graph:"matrix", icon:"document" },
+  { n:"03", title:"BUILD BEYOND THE DEAL", copy:"Align contracts, ownership and business strategy so individual transactions can contribute to durable long-term value.", detail:"STRUCTURE BEFORE SCALE", graph:"team", icon:"growth" },
+  { n:"04", title:"NAVIGATE WHAT'S NEXT", copy:"Spot emerging issues across NIL, digital rights, AI, media, data and new business models before they become avoidable roadblocks.", detail:"SEE THE NEXT ISSUE EARLY", graph:"progression", icon:"globe" },
 ];
+
+function ServiceIcon({type}){
+ const common={viewBox:"0 0 32 32",fill:"none",stroke:"currentColor",strokeWidth:"1.7",strokeLinecap:"round",strokeLinejoin:"round","aria-hidden":"true"};
+ if(type==="layers") return <svg {...common}><path d="M16 4 27 10 16 16 5 10 16 4Z"/><path d="m5 15 11 6 11-6"/><path d="m5 20 11 6 11-6"/></svg>;
+ if(type==="document") return <svg {...common}><path d="M8 3h11l6 6v20H8V3Z"/><path d="M19 3v7h6M12 15h9M12 20h9M12 25h6"/></svg>;
+ if(type==="growth") return <svg {...common}><path d="M5 27h22"/><path d="M7 27v-8h5v8M15 27V13h5v14M23 27V6h5v21"/></svg>;
+ return <svg {...common}><circle cx="16" cy="16" r="12"/><path d="M4 16h24M16 4c4 4 6 8 6 12s-2 8-6 12M16 4c-4 4-6 8-6 12s2 8 6 12M7 10h18M7 22h18"/></svg>;
+}
 
 function StrategyGraph({type}){
  if(type==="layers") return <div className="strategy-graph strategy-layers"><p className="graph-kicker">STRUCTURE BEFORE SCALE</p><div className="layer"><b>RIGHTS LAYER</b><span>NIL / likeness · Content / IP · Data · Trademarks · Contractual rights</span></div><div className="graph-arrow">↓</div><div className="layer"><b>TRANSACTION LAYER</b><span>Endorsements · Licensing · Media · Advisor agreements · Equity</span></div><div className="graph-arrow">↓</div><div className="layer"><b>OWNERSHIP LAYER</b><span>Cash · IP · Audience · Equity · Long-term enterprise value</span></div><p className="graph-question">Every transaction asks: <strong>What are you giving?</strong> <strong>What do you retain?</strong></p></div>;
@@ -21,7 +29,7 @@ export default function BeyondPractice(){
     <div className="section-intro-label"><p className="eyebrow" id="beyond-heading">BEYOND THE PRACTICE</p><span /></div>
     <a className="beyond-contact" href="mailto:ak@thelewfirm.com">WORK WITH ALEX <span>↗</span></a>
   </div>
-  <div className="beyond-grid">{SERVICES.map((s,i)=><button type="button" className={`beyond-world ${open===i?"is-open":""}`} key={s.n} onClick={()=>setOpen(open===i?null:i)} aria-expanded={open===i}><span>{s.n}</span><p className="beyond-role">{s.title}</p><p>{s.copy}</p><small>{s.detail}</small><b className="beyond-toggle">{open===i?"−":"+"}</b></button>)}</div>
+  <div className="beyond-grid">{SERVICES.map((s,i)=><button type="button" className={`beyond-world ${open===i?"is-open":""}`} key={s.n} onClick={()=>setOpen(open===i?null:i)} aria-expanded={open===i}><div className="beyond-card-meta"><ServiceIcon type={s.icon}/><span>{s.n}</span></div><p className="beyond-role">{s.title}</p><p>{s.copy}</p><small>{s.detail}</small><b className="beyond-toggle">{open===i?"−":"+"}</b></button>)}</div>
   {open!==null&&<div className="strategy-panel"><button type="button" className="strategy-close" onClick={()=>setOpen(null)}>CLOSE ×</button><StrategyGraph type={SERVICES[open].graph}/></div>}
   <div className="beyond-thesis"><p>The Lew Firm supports the artist/athlete and their management team at every stage, using our legal expertise and network so each transaction works with the ones that come after it.</p></div>
  </section>
