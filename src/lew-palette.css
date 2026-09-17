@@ -1,15 +1,15 @@
 :root{
-  --navy:#426b82;
-  --navy2:#527b91;
-  --navy-deep:#31566b;
-  --ivory:#f7f3eb;
-  --beige:#dfc9a7;
-  --beige2:#eee0c9;
-  --muted:#d8e1e5;
-  --rule:rgba(247,243,235,.30);
+  --navy:#0d2230;
+  --navy2:#142f40;
+  --navy-deep:#081923;
+  --ivory:#f4efe6;
+  --beige:#d2bea0;
+  --beige2:#e8dcc9;
+  --muted:#c5c8c6;
+  --rule:rgba(232,220,201,.24);
 }
-html,body,#root,body,main{background:#426b82!important;color:var(--ivory)!important}
-.section,.hero-cinematic{background:#426b82!important}
-.site-header{background:rgba(66,107,130,.98)!important}
-.hero-lane:hover,.practice-world-tabs button:hover,.practice-world-tabs button.active,.explorer-option-card:hover,.sla-item:hover{background:#527b91!important;color:var(--ivory)!important}
-footer{background:#31566b!important}
+html,body,#root,body,main{background:#0d2230!important;color:var(--ivory)!important}
+.section,.hero-cinematic{background:#0d2230!important}
+.site-header{background:rgba(13,34,48,.98)!important}
+.hero-lane:hover,.practice-world-tabs button:hover,.practice-world-tabs button.active,.explorer-option-card:hover,.sla-item:hover,.beyond-world:hover{background:#142f40!important;color:var(--ivory)!important}
+footer{background:#081923!important}
