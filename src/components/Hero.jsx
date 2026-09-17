@@ -12,9 +12,8 @@ function openLane(lane) {
 export default function Hero() {
   return (
     <section className="hero-cinematic" id="top" aria-labelledby="hero-heading">
-      <div className="hero-opening hero-opening--compact section-intro-row">
+      <div className="hero-opening hero-opening--compact section-intro-row section-intro-row--label-only">
         <div className="section-intro-label"><p className="hero-overline hero-section-label" id="hero-heading">PRACTICE</p><span /></div>
-        <p className="hero-practice-line">My legal practice sits where talent, rights, business and culture meet.</p>
         <a className="hero-contact" href="mailto:ak@thelewfirm.com">CONTACT ALEX <span>↗</span></a>
       </div>
       <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s practice">
