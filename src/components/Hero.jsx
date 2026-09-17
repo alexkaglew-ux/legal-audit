@@ -1,7 +1,7 @@
 const LANES = [
-  { n: "01", title: "SPORTS + NIL", copy: "Athletes, college sports, representation, rights and the rules changing the game.", topic: "sports-nil" },
-  { n: "02", title: "ENTERTAINMENT", copy: "Music, television, film, talent, production and the agreements behind creative work.", topic: "film-entertainment" },
-  { n: "03", title: "IDEAS", copy: "Legal developments, analysis and the questions shaping sports and entertainment right now.", href: "#insights" },
+  { n: "01", title: "SPORTS", copy: "Athletes, NIL, college sports, representation, endorsements and the rules shaping careers.", topic: "sports-nil" },
+  { n: "02", title: "MUSIC", copy: "Artists, talent, licensing, rights, commercial partnerships and the agreements behind creative careers.", topic: "music" },
+  { n: "03", title: "FILM / TV", copy: "Development, rights, talent, production, licensing and the business affairs behind screen projects.", topic: "film-entertainment" },
 ];
 
 function openLane(lane) {
@@ -16,24 +16,20 @@ export default function Hero() {
       <div className="hero-opening">
         <div className="hero-identity">
           <p className="hero-overline">ALEX KAGIANARIS, ESQ. · SENIOR ATTORNEY, THE LEW FIRM APC</p>
-          <h1 id="hero-heading">Pick a door.</h1>
-          <p>My work sits where sports, entertainment, rights and business collide. Start with the world you came for.</p>
+          <h1 id="hero-heading">Practice.</h1>
+          <p>My legal practice sits where talent, rights, business and culture meet. Explore the area that brought you here.</p>
         </div>
         <a className="hero-contact" href="mailto:ak@thelewfirm.com">CONTACT ALEX <span>↗</span></a>
       </div>
-      <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s work">
-        {LANES.map((lane) => lane.topic ? (
+      <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s practice">
+        {LANES.map((lane) => (
           <button className="hero-lane" type="button" onClick={() => openLane(lane)} key={lane.n}>
             <span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p><i>↘</i>
           </button>
-        ) : (
-          <a className="hero-lane" href={lane.href} key={lane.n}>
-            <span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p><i>↘</i>
-          </a>
         ))}
       </div>
       <div className="hero-ticker" aria-hidden="true">
-        <span>CONTRACTS</span><b>·</b><span>NIL</span><b>·</b><span>RIGHTS</span><b>·</b><span>DEALS</span><b>·</b><span>RULES</span><b>·</b><span>LEVERAGE</span><b>·</b><span>ENTERTAINMENT</span><b>·</b><span>SPORTS</span>
+        <span>CONTRACTS</span><b>·</b><span>NIL</span><b>·</b><span>RIGHTS</span><b>·</b><span>DEALS</span><b>·</b><span>IP</span><b>·</b><span>PRODUCTION</span><b>·</b><span>LICENSING</span><b>·</b><span>SPORTS</span>
       </div>
     </section>
   );
