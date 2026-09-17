@@ -1,6 +1,6 @@
 export default function IdentityLayer(){
   return (
-    <section className="identity-layer" aria-labelledby="identity-heading">
+    <section className="identity-layer" aria-labelledby="identity-heading" data-layout="editorial-hero-v2">
       <img className="identity-portrait" src="/headshot.png" alt="Alex Kagianaris, Esq." />
       <div className="identity-shade" aria-hidden="true" />
       <div className="identity-copy">
