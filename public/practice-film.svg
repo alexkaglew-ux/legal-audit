@@ -1,33 +1,21 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
 <defs>
- <linearGradient id="bg" x1="0" x2="1"><stop stop-color="#061722"/><stop offset=".55" stop-color="#0b2636"/><stop offset="1" stop-color="#102f40"/></linearGradient>
- <radialGradient id="glow"><stop stop-color="#d8c6a8" stop-opacity=".32"/><stop offset="1" stop-color="#d8c6a8" stop-opacity="0"/></radialGradient>
- <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#04131d"/><stop offset=".55" stop-color="#0b2130"/><stop offset="1" stop-color="#071722"/></linearGradient>
+<radialGradient id="lamp"><stop stop-color="#f1d5a5" stop-opacity=".62"/><stop offset=".2" stop-color="#d9b77d" stop-opacity=".28"/><stop offset="1" stop-color="#d9b77d" stop-opacity="0"/></radialGradient>
+<filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
 </defs>
 <rect width="1200" height="700" fill="url(#bg)"/>
-<circle cx="1010" cy="145" r="170" fill="url(#glow)" filter="url(#blur)"/>
-<circle cx="850" cy="225" r="95" fill="url(#glow)" filter="url(#blur)" opacity=".55"/>
-<!-- studio lights -->
-<g stroke="#bca98b" stroke-width="7" fill="#0a1c27" opacity=".78">
- <path d="M990 155 910 650M1080 150l85 500"/>
- <rect x="930" y="80" width="150" height="105" rx="8" transform="rotate(-8 1005 132)"/>
- <path d="m942 94-70-55 35 112M1070 86l88-45-66 112"/>
-</g>
-<!-- camera -->
-<g fill="#07141d" stroke="#71808a" stroke-width="5" opacity=".94">
- <rect x="715" y="180" width="210" height="130" rx="16"/>
- <rect x="920" y="210" width="92" height="74" rx="8"/>
- <circle cx="963" cy="247" r="42"/>
- <rect x="750" y="145" width="70" height="38" rx="8"/>
- <path d="M810 310v90M745 400h135M775 400 700 650M850 400l85 250"/>
-</g>
-<!-- director chair -->
-<g stroke="#d0c0a6" stroke-width="8" fill="none" opacity=".9">
- <path d="M505 325v300M690 325v300M505 430h185M525 625l145-195M670 625 525 430"/>
- <rect x="490" y="285" width="215" height="105" rx="5" fill="#091c28" stroke="#8f816c"/>
- <path d="M520 475h155"/>
-</g>
-<text x="597" y="350" text-anchor="middle" fill="#d9c8aa" font-family="Georgia,serif" font-size="34" letter-spacing="6">DIRECTOR</text>
-<!-- foreground vignette -->
-<rect width="1200" height="700" fill="none" stroke="#020a0f" stroke-width="80" opacity=".32"/>
+<!-- warm practical studio lights -->
+<g opacity=".9"><circle cx="875" cy="128" r="145" fill="url(#lamp)" filter="url(#soft)"/><circle cx="1085" cy="190" r="125" fill="url(#lamp)" filter="url(#soft)"/></g>
+<!-- out of focus crew silhouettes -->
+<g fill="#0a1218" opacity=".78"><circle cx="760" cy="315" r="38"/><rect x="724" y="350" width="75" height="210" rx="30"/><circle cx="1100" cy="330" r="34"/><rect x="1068" y="363" width="68" height="190" rx="28"/></g>
+<!-- camera body and tripod, right background -->
+<g fill="#071017" stroke="#53636c" stroke-width="5" opacity=".9"><rect x="895" y="205" width="185" height="112" rx="12"/><rect x="1068" y="226" width="72" height="70" rx="8"/><circle cx="1112" cy="261" r="34"/><rect x="930" y="174" width="64" height="32" rx="6"/><path d="M982 318v95M918 414h132M948 414 875 660M1020 414l92 246"/></g>
+<!-- light stand -->
+<g stroke="#8b806d" stroke-width="7" fill="#10171b"><path d="M820 175 760 655"/><rect x="758" y="82" width="128" height="92" rx="5" transform="rotate(-6 822 128)"/><path d="m770 92-58-45 30 103M875 91l72-38-54 102"/></g>
+<!-- authentic director chair foreground -->
+<g stroke="#bda984" stroke-width="8" fill="none"><path d="M455 330v300M675 330v300M455 445h220M480 630l170-185M650 630 480 445"/><rect x="438" y="280" width="255" height="120" rx="4" fill="#08151e" stroke="#8f7a59"/><path d="M478 488h172"/></g>
+<text x="566" y="352" text-anchor="middle" fill="#d4b780" font-family="Arial,sans-serif" font-size="32" font-weight="700" letter-spacing="6">DIRECTOR</text>
+<!-- cinematic vignette -->
+<rect width="1200" height="700" fill="none" stroke="#01070b" stroke-width="100" opacity=".38"/>
 </svg>
