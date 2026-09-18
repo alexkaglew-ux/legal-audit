@@ -1,21 +1,22 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice">
 <defs>
-<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#04131d"/><stop offset=".55" stop-color="#0b2130"/><stop offset="1" stop-color="#071722"/></linearGradient>
-<radialGradient id="lamp"><stop stop-color="#f1d5a5" stop-opacity=".62"/><stop offset=".2" stop-color="#d9b77d" stop-opacity=".28"/><stop offset="1" stop-color="#d9b77d" stop-opacity="0"/></radialGradient>
-<filter id="soft"><feGaussianBlur stdDeviation="14"/></filter>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07141d"/><stop offset=".55" stop-color="#102532"/><stop offset="1" stop-color="#091923"/></linearGradient>
+<radialGradient id="g1"><stop stop-color="#efd3a1" stop-opacity=".68"/><stop offset=".16" stop-color="#caa56c" stop-opacity=".32"/><stop offset="1" stop-color="#caa56c" stop-opacity="0"/></radialGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="22"/></filter>
 </defs>
 <rect width="1200" height="700" fill="url(#bg)"/>
-<!-- warm practical studio lights -->
-<g opacity=".9"><circle cx="875" cy="128" r="145" fill="url(#lamp)" filter="url(#soft)"/><circle cx="1085" cy="190" r="125" fill="url(#lamp)" filter="url(#soft)"/></g>
-<!-- out of focus crew silhouettes -->
-<g fill="#0a1218" opacity=".78"><circle cx="760" cy="315" r="38"/><rect x="724" y="350" width="75" height="210" rx="30"/><circle cx="1100" cy="330" r="34"/><rect x="1068" y="363" width="68" height="190" rx="28"/></g>
-<!-- camera body and tripod, right background -->
-<g fill="#071017" stroke="#53636c" stroke-width="5" opacity=".9"><rect x="895" y="205" width="185" height="112" rx="12"/><rect x="1068" y="226" width="72" height="70" rx="8"/><circle cx="1112" cy="261" r="34"/><rect x="930" y="174" width="64" height="32" rx="6"/><path d="M982 318v95M918 414h132M948 414 875 660M1020 414l92 246"/></g>
-<!-- light stand -->
-<g stroke="#8b806d" stroke-width="7" fill="#10171b"><path d="M820 175 760 655"/><rect x="758" y="82" width="128" height="92" rx="5" transform="rotate(-6 822 128)"/><path d="m770 92-58-45 30 103M875 91l72-38-54 102"/></g>
-<!-- authentic director chair foreground -->
-<g stroke="#bda984" stroke-width="8" fill="none"><path d="M455 330v300M675 330v300M455 445h220M480 630l170-185M650 630 480 445"/><rect x="438" y="280" width="255" height="120" rx="4" fill="#08151e" stroke="#8f7a59"/><path d="M478 488h172"/></g>
-<text x="566" y="352" text-anchor="middle" fill="#d4b780" font-family="Arial,sans-serif" font-size="32" font-weight="700" letter-spacing="6">DIRECTOR</text>
-<!-- cinematic vignette -->
-<rect width="1200" height="700" fill="none" stroke="#01070b" stroke-width="100" opacity=".38"/>
+<!-- photographic bokeh -->
+<circle cx="860" cy="135" r="150" fill="url(#g1)" filter="url(#blur)"/><circle cx="1070" cy="210" r="115" fill="url(#g1)" filter="url(#blur)" opacity=".7"/><circle cx="690" cy="190" r="75" fill="url(#g1)" filter="url(#blur)" opacity=".42"/>
+<!-- soft crew in background -->
+<g fill="#050b10" opacity=".66"><circle cx="770" cy="315" r="31"/><rect x="742" y="345" width="58" height="170" rx="24"/><circle cx="1080" cy="350" r="29"/><rect x="1055" y="378" width="54" height="155" rx="22"/></g>
+<!-- cinema camera, intentionally background -->
+<g fill="#060d12" stroke="#394953" stroke-width="4" opacity=".88"><rect x="875" y="190" width="178" height="104" rx="11"/><rect x="1040" y="212" width="70" height="65" rx="7"/><circle cx="1080" cy="245" r="32"/><rect x="912" y="158" width="62" height="32" rx="6"/><path d="M955 295v92M900 388h120M925 388 860 655M995 388l80 267"/></g>
+<!-- authentic director chair -->
+<g stroke="#a9936f" stroke-width="7" fill="none"><path d="M485 315v305M690 315v305M485 438h205M508 620l160-182M668 620 508 438"/><rect x="465" y="270" width="245" height="118" rx="5" fill="#08131b" stroke="#8d7958"/><path d="M510 478h155"/></g>
+<text x="588" y="342" text-anchor="middle" fill="#d4b77f" font-family="Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="5">DIRECTOR</text>
+<!-- film light -->
+<g stroke="#81725d" stroke-width="6" fill="#10161a" opacity=".9"><path d="M820 165 760 650"/><rect x="760" y="80" width="120" height="84" rx="5" transform="rotate(-7 820 122)"/><path d="m772 90-55-42 29 96M870 88l68-35-51 95"/></g>
+<!-- subtle floor/table shadow -->
+<ellipse cx="610" cy="655" rx="500" ry="70" fill="#020609" opacity=".55"/>
+<rect width="1200" height="700" fill="none" stroke="#010609" stroke-width="90" opacity=".32"/>
 </svg>
