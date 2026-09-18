@@ -6,7 +6,6 @@ import BeyondPractice from "./components/BeyondPractice.jsx";
 import IssueExplorer from "./components/IssueExplorer.jsx";
 import InsightsFeed from "./components/InsightsFeed.jsx";
 import AboutPreview from "./components/AboutPreview.jsx";
-import BooksEducation from "./components/BooksEducation.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
-export default function App(){return <main><SiteHeader/><IdentityLayer/><Hero/><PracticeDetail/><BeyondPractice/><IssueExplorer/><InsightsFeed/><AboutPreview/><BooksEducation/><ContactSection/><SiteFooter/></main>}
+export default function App(){return <main><SiteHeader/><IdentityLayer/><Hero/><PracticeDetail/><BeyondPractice/><IssueExplorer/><InsightsFeed/><AboutPreview/><ContactSection/><SiteFooter/></main>}
