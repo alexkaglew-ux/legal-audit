@@ -6,6 +6,6 @@ import "./v2-polish.css";
 import "./lew-palette.css";
 import "./beyond-practice.css";
 import "./practice-detail.css";
-import "./lower-sections.css";
+import "./lower-home.css";
 import "./identity-layer.css";
 ReactDOM.createRoot(document.getElementById("root")).render(<React.StrictMode><App /></React.StrictMode>);
