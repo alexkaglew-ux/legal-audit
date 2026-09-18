@@ -146,3 +146,6 @@ footer{background:#04131c!important}
 .beyond-intro--compact{background:#03141f!important;padding-top:16px!important;padding-bottom:16px!important}
 .more-law-title{font-size:clamp(22px,2.1vw,32px)!important}
 .beyond-intro--compact .beyond-contact{color:#ddb77b!important}
+
+/* Match More Than Just Law label exactly to Practice section label */
+.more-law-title{margin:0!important;color:var(--beige)!important;font-family:inherit!important;font-size:10px!important;font-weight:800!important;line-height:1.2!important;letter-spacing:.18em!important;text-transform:uppercase!important}
