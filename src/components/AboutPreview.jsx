@@ -16,25 +16,15 @@ export default function AboutPreview(){
       <div className="about-links"><a className="text-link" href="mailto:ak@thelewfirm.com">CONTACT ALEX <span>↗</span></a></div>
     </div>
     <div className="publishing-column" id="books-education">
-      <div className="book-object" aria-label="Forthcoming book cover">
-        <div className="book-spine" aria-hidden="true"/>
-        <div className="book-cover">
-          <span>SPORTS · LAW · POWER</span>
-          <strong>THE AUDIBLES<br/>THAT CHANGED<br/>SPORTS</strong>
-          <i>How Legal Fights Rewrote<br/>The Sports Industry</i>
-          <b>ALEX KAGIANARIS, ESQ.</b>
+      <div className="book-block">
+        <div className="book-object" aria-label="Forthcoming book cover">
+          <div className="book-spine" aria-hidden="true"/>
+          <div className="book-cover"><span>SPORTS · LAW · POWER</span><strong>THE AUDIBLES<br/>THAT CHANGED<br/>SPORTS</strong><i>How Legal Fights Rewrote<br/>The Sports Industry</i><b>ALEX KAGIANARIS, ESQ.</b></div>
         </div>
+        <div className="book-copy"><p className="eyebrow">BOOK</p><span className="publishing-status">{book?.status || "Forthcoming"}</span><h3>{book?.title}</h3><p>{book?.description}</p></div>
       </div>
-      <div className="publishing-copy">
-        <p className="eyebrow">BOOKS + EDUCATION</p>
-        <span className="status-label">{book?.status || "Forthcoming"}</span>
-        <h3>{book?.title || "The Audibles That Changed Sports"}</h3>
-        <p>{book?.description}</p>
-        <div className="course-inline">
-          <span>{course?.status || "Coming soon"}</span>
-          <h4>{course?.title || "NIL + Transfers"}</h4>
-          <p>{course?.description}</p>
-        </div>
+      <div className="course-block">
+        <p className="eyebrow">EDUCATION</p><span className="publishing-status">{course?.status || "Coming soon"}</span><h4>{course?.title}</h4><p>{course?.description}</p>
       </div>
     </div>
     <p className="about-combined-disclaimer">Legal services are provided through The Lew Firm APC. Commentary and educational information only. Not legal advice.</p>
