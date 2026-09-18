@@ -107,26 +107,22 @@ export const LATEST_ANALYSIS = [
   },
 ];
 
-/**
- * PLACEHOLDER — forthcoming products. Do not imply availability before
- * launch (OPERATING_RULES.md #18).
- */
 export const BOOKS_EDUCATION = [
   {
     id: "sports-law-book",
     kind: "Book",
-    title: "Sports law book",
+    title: "The Audibles That Changed Sports",
     status: "Forthcoming",
     description:
-      "A field guide to the deals and disputes shaping sports and entertainment, drawn from The Legal Audit. Title and publication details to be announced.",
+      "How Legal Fights Rewrote The Sports Industry. A trade nonfiction book about the legal moments that changed who held power, who got paid, and how modern sports was built.",
   },
   {
     id: "nil-course",
     kind: "Course",
-    title: "NIL course",
+    title: "NIL + Transfers",
     status: "Coming soon",
     description:
-      "A practical course for athletes, families, and advisors navigating NIL agreements and representation. Curriculum and launch date to be announced.",
+      "Practical, up-to-date guidance for athletes, families, lawyers and NIL agents navigating NIL agreements, transfers and the rules around them.",
   },
 ];
 
