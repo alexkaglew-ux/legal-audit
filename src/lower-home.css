@@ -74,3 +74,33 @@ footer{background:#04131c!important}
 .book-cover strong{font-size:17px!important;margin-top:17px!important}
 .book-cover i{font-size:7px!important;margin-top:9px!important}
 @media(max-width:700px){.book-block{grid-template-columns:105px 1fr}.course-block{margin-left:0}.book-object{width:95px!important;height:132px!important}.book-spine{height:125px!important}.book-cover strong{font-size:13px!important;margin-top:10px!important}}
+
+
+/* Approved three-panel About / Book / Course composition */
+.about-publishing{display:grid!important;grid-template-columns:1.25fr 1fr 1fr!important;gap:0!important;align-items:stretch!important;padding:32px clamp(34px,4.5vw,72px) 22px!important;background:#041722!important}
+.about-panel,.book-panel,.course-panel{min-width:0;padding:0 clamp(24px,2.5vw,42px)}
+.about-panel{padding-left:0}
+.book-panel,.course-panel{border-left:1px solid var(--rule)}
+.about-panel>.eyebrow,.book-panel>.eyebrow,.course-panel>.eyebrow{margin:0 0 24px!important}
+.about-panel-body{display:grid;grid-template-columns:150px 1fr;gap:28px;align-items:start}
+.about-panel .about-portrait-wrap{max-width:150px!important}
+.about-panel .about-copy h2{margin:0 0 16px!important;font-size:clamp(28px,2.5vw,40px)!important;line-height:1.02!important}
+.about-panel .about-lead{font-size:12px!important;line-height:1.5!important}
+.about-panel .about-secondary{font-size:10px!important;line-height:1.5!important}
+.book-panel-body{display:grid;grid-template-columns:145px 1fr;gap:24px;align-items:center}
+.book-panel .book-object{width:135px!important;height:186px!important}
+.book-panel .book-spine{height:177px!important}
+.book-panel .book-cover{padding:15px 12px 11px!important}
+.book-panel .book-cover strong{font-size:18px!important;margin-top:18px!important}
+.book-panel .book-copy h3,.course-panel h3{margin:7px 0 9px!important;color:var(--ivory);font:400 clamp(22px,2vw,31px)/1.03 Georgia,serif!important}
+.book-panel .book-copy>p:last-child,.course-panel>p:last-child{margin:0;color:#c2c8ca;font-size:10px;line-height:1.5}
+.course-visual{position:relative;height:150px;margin:0 0 17px;perspective:800px}
+.course-screen{position:absolute;left:4%;right:4%;top:0;height:120px;padding:18px 20px;background:linear-gradient(125deg,#071923,#0b2b3d 58%,#06141d);border:1px solid rgba(210,190,160,.42);box-shadow:0 14px 30px rgba(0,0,0,.35);transform:rotateX(-2deg);overflow:hidden}
+.course-screen:after{content:"";position:absolute;right:-20px;top:-25px;width:150px;height:180px;background:radial-gradient(circle at 50% 30%,rgba(210,190,160,.16),transparent 58%),linear-gradient(145deg,transparent 38%,rgba(255,255,255,.05));transform:skewX(-12deg)}
+.course-screen span{display:block;color:var(--beige);font:800 6px/1 Arial,sans-serif;letter-spacing:.16em}
+.course-screen strong{display:block;margin-top:14px;color:var(--ivory);font:700 20px/.92 Arial,sans-serif;letter-spacing:.02em}
+.course-screen i{display:block;margin-top:9px;max-width:210px;color:#d5bd91;font:italic 8px/1.35 Georgia,serif}
+.course-keyboard{position:absolute;left:0;right:0;bottom:3px;height:35px;background:linear-gradient(180deg,#24323a,#09131a);clip-path:polygon(8% 0,92% 0,100% 100%,0 100%);border-bottom:1px solid rgba(210,190,160,.28)}
+.about-combined-disclaimer{grid-column:1/4!important;margin:24px 0 0!important;padding-top:14px;border-top:1px solid rgba(232,220,201,.12)}
+@media(max-width:1050px){.about-publishing{grid-template-columns:1fr 1fr!important}.about-panel{grid-column:1/3;padding-right:0;padding-bottom:26px}.book-panel{border-left:0;padding-left:0}.course-panel{padding-right:0}.about-combined-disclaimer{grid-column:1/3!important}}
+@media(max-width:700px){.about-publishing{grid-template-columns:1fr!important}.about-panel,.book-panel,.course-panel{grid-column:1!important;border-left:0!important;border-top:1px solid var(--rule);padding:24px 0!important}.about-panel{border-top:0!important;padding-top:0!important}.about-panel-body{grid-template-columns:110px 1fr;gap:20px}.book-panel-body{grid-template-columns:110px 1fr}.about-combined-disclaimer{grid-column:1!important}}
