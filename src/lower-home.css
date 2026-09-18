@@ -149,3 +149,6 @@ footer{background:#04131c!important}
 
 /* Match More Than Just Law label exactly to Practice section label */
 .more-law-title{margin:0!important;color:var(--beige)!important;font-family:inherit!important;font-size:10px!important;font-weight:800!important;line-height:1.2!important;letter-spacing:.18em!important;text-transform:uppercase!important}
+
+/* No decorative rule after More Than Just Law */
+.beyond-intro--compact .section-intro-label>span{display:none!important}
