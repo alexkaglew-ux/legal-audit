@@ -17,3 +17,38 @@ html,body,#root,main,.section{background:#071c29!important}
 .books-education-card{background:#0a2433!important}
 .contact{background:#071c29!important;border-top:1px solid var(--rule)!important}
 footer{background:#061722!important}
+
+
+/* Dark unified about + publishing block */
+html,body,#root,main,.section{background:#061722!important}
+.site-header{background:rgba(6,23,34,.985)!important}
+.insights,.about-preview,.contact{background:#071b28!important}
+.about-publishing{max-width:none!important;display:grid!important;grid-template-columns:minmax(130px,180px) minmax(300px,.9fr) minmax(470px,1.35fr)!important;gap:clamp(28px,4vw,64px)!important;padding:34px clamp(35px,5vw,78px) 26px!important;align-items:center!important;border-top:1px solid var(--rule)!important}
+.about-publishing .about-portrait-wrap{max-width:170px!important}
+.about-publishing .about-portrait{width:100%!important;aspect-ratio:4/5!important;object-fit:cover!important}
+.about-publishing .about-copy h2{font-size:clamp(27px,2.6vw,40px)!important;line-height:1.02!important;margin:8px 0 12px!important}
+.about-publishing .about-copy .about-lead{font-size:14px!important;line-height:1.5!important}
+.about-publishing .about-secondary{font-size:11px!important;line-height:1.5!important;margin-top:9px!important}
+.about-publishing .about-links{margin-top:13px!important}
+.publishing-column{display:grid;grid-template-columns:180px 1fr;gap:26px;align-items:center;border-left:1px solid var(--rule);padding-left:clamp(25px,3vw,46px)}
+.book-object{position:relative;width:150px;height:205px;filter:drop-shadow(14px 15px 16px rgba(0,0,0,.36));transform:perspective(700px) rotateY(-7deg)}
+.book-spine{position:absolute;left:-10px;top:5px;width:12px;height:196px;background:#09141b;border:1px solid rgba(210,190,160,.42);transform:skewY(-28deg)}
+.book-cover{position:absolute;inset:0;padding:18px 14px 14px;display:flex;flex-direction:column;background:linear-gradient(155deg,#e6dfd2,#b9afa0);border:1px solid #eee5d7;color:#0a1a24}
+.book-cover:after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 55%,rgba(255,255,255,.24));pointer-events:none}
+.book-cover span{font:700 6px/1.2 Arial,sans-serif;letter-spacing:.17em}
+.book-cover strong{margin-top:22px;font:400 20px/.92 Georgia,serif;letter-spacing:-.04em}
+.book-cover i{margin-top:12px;font:italic 8px/1.35 Georgia,serif}
+.book-cover b{margin-top:auto;font:700 6px/1.2 Arial,sans-serif;letter-spacing:.13em}
+.publishing-copy{position:relative}
+.publishing-copy .status-label{position:absolute!important;right:0!important;top:0!important}
+.publishing-copy h3{font-size:clamp(25px,2.3vw,35px)!important;line-height:1.02!important;margin:13px 0 10px!important;max-width:440px}
+.publishing-copy>p:not(.eyebrow){font-size:11px;line-height:1.5;color:#c5c8c6;max-width:480px}
+.course-inline{margin-top:18px;padding-top:15px;border-top:1px solid var(--rule)}
+.course-inline>span{color:var(--beige);font-size:7px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.course-inline h4{margin:5px 0 5px;color:var(--ivory);font:400 18px/1.15 Georgia,serif}
+.course-inline p{margin:0;color:#c5c8c6;font-size:10px;line-height:1.45}
+.about-combined-disclaimer{grid-column:2/4;margin:0!important;padding-top:2px;color:#8f999d!important;font:400 7px/1.4 Arial,sans-serif!important;letter-spacing:.08em;text-transform:uppercase}
+.contact{background:#061722!important}
+footer{background:#04131c!important}
+@media(max-width:1050px){.about-publishing{grid-template-columns:150px 1fr!important}.publishing-column{grid-column:1/3;border-left:0;border-top:1px solid var(--rule);padding:25px 0 0}.about-combined-disclaimer{grid-column:1/3}}
+@media(max-width:700px){.about-publishing{grid-template-columns:1fr!important;padding:28px 24px!important}.publishing-column{grid-column:1;grid-template-columns:120px 1fr;gap:18px}.book-object{width:110px;height:155px}.book-spine{height:147px}.book-cover{padding:13px 10px 10px}.book-cover strong{font-size:15px;margin-top:15px}.about-combined-disclaimer{grid-column:1}.publishing-copy .status-label{position:static!important;display:inline-block;margin-top:8px}}
