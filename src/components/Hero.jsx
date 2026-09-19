@@ -18,7 +18,8 @@ export default function Hero() {
       </div>
       <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s practice">
         {LANES.map((lane) => (
-          <button className={`hero-lane hero-lane--${lane.topic}`} style={lane.topic==="film-tv" ? { backgroundImage: `linear-gradient(90deg,rgba(3,16,24,.94),rgba(5,21,31,.10)), url("/practice-film-v2.svg?v=film4")`, backgroundPosition: "55% 50%", backgroundSize: "cover", backgroundRepeat: "no-repeat" } : undefined} type="button" onClick={() => openLane(lane)} key={lane.n}>
+          <button className={`hero-lane hero-lane--${lane.topic}`} type="button" onClick={() => openLane(lane)} key={lane.n}>
+            {lane.topic==="film-tv" && <div className="film-photo" aria-hidden="true"><span className="film-glow film-glow-a"/><span className="film-glow film-glow-b"/><span className="film-camera"><i/><b/><em/></span><span className="film-chair"><i>DIRECTOR</i><b/><em/></span></div>}
             <span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p><span className="hero-lane-learn">LEARN MORE <b>→</b></span>
           </button>
         ))}
