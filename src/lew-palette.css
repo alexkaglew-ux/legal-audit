@@ -73,3 +73,8 @@ footer{background:#081923!important}
 .film-chair i{position:absolute;z-index:2;top:29px;left:0;right:0;text-align:center;color:#d0ad75;font:700 9px/1 Arial,sans-serif;letter-spacing:.18em}
 .film-chair b,.film-chair em{position:absolute;bottom:-5px;left:55px;width:4px;height:85px;background:#a88e64;transform-origin:bottom}.film-chair b{transform:rotate(37deg)}.film-chair em{transform:rotate(-37deg)}
 .hero-lanes .hero-lane.hero-lane--film-tv>*:not(.film-photo){position:relative!important;z-index:2!important}
+
+/* Film/TV final: authentic photographic film-set image, not illustration */
+.hero-lanes .hero-lane.hero-lane--film-tv{background-image:linear-gradient(90deg,rgba(3,16,24,.94) 0%,rgba(4,19,28,.55) 48%,rgba(4,19,28,.12) 100%),url('https://images.unsplash.com/photo-1727451139462-cd34008cd50b?auto=format&fit=crop&fm=jpg&q=82&w=1800')!important;background-position:center 50%!important;background-size:cover!important;background-repeat:no-repeat!important}
+.hero-lanes .hero-lane.hero-lane--film-tv:before{display:none!important}
+.film-photo{display:none!important}
