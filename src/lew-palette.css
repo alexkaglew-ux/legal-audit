@@ -57,3 +57,19 @@ footer{background:#081923!important}
 .hero-lanes .hero-lane.hero-lane--film-tv:before{content:"";position:absolute;z-index:0;inset:0;background:linear-gradient(90deg,rgba(3,16,24,.94) 0%,rgba(5,21,31,.58) 48%,rgba(5,21,31,.12) 100%);pointer-events:none}
 .hero-lanes .hero-lane.hero-lane--film-tv:after{display:none!important}
 .hero-lanes .hero-lane.hero-lane--film-tv>*{position:relative;z-index:1}
+
+/* Film/TV rendered scene — no background asset dependency */
+.hero-lanes .hero-lane.hero-lane--film-tv{background:#071823!important;overflow:hidden!important;isolation:isolate}
+.hero-lanes .hero-lane.hero-lane--film-tv:before{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(3,16,24,.96) 0%,rgba(3,16,24,.78) 38%,rgba(3,16,24,.20) 75%,rgba(3,16,24,.08) 100%);pointer-events:none}
+.film-photo{position:absolute!important;z-index:0!important;inset:0!important;overflow:hidden;background:linear-gradient(120deg,#081722,#102a38 58%,#091821)!important}
+.film-glow{position:absolute;border-radius:50%;filter:blur(22px);background:rgba(223,181,113,.34)}
+.film-glow-a{width:180px;height:180px;right:7%;top:-40px}.film-glow-b{width:105px;height:105px;right:35%;top:10px;opacity:.65}
+.film-camera{position:absolute;right:7%;top:24%;width:145px;height:76px;background:#050b10;border:2px solid #58636a;border-radius:7px;box-shadow:0 10px 24px rgba(0,0,0,.42)}
+.film-camera:after{content:"";position:absolute;right:-47px;top:16px;width:47px;height:43px;background:#050b10;border:2px solid #58636a;border-radius:5px}
+.film-camera i{position:absolute;right:-37px;top:20px;width:35px;height:35px;border:3px solid #58636a;border-radius:50%}
+.film-camera b{position:absolute;left:63px;top:76px;width:4px;height:62px;background:#69737a}.film-camera em{position:absolute;left:17px;top:136px;width:135px;height:4px;background:#69737a;transform:rotate(-2deg)}
+.film-chair{position:absolute;right:38%;bottom:2%;width:118px;height:126px;border-left:4px solid #b19a72;border-right:4px solid #b19a72}
+.film-chair:before{content:"";position:absolute;left:-12px;right:-12px;top:8px;height:56px;background:#08131b;border:3px solid #a88e64}
+.film-chair i{position:absolute;z-index:2;top:29px;left:0;right:0;text-align:center;color:#d0ad75;font:700 9px/1 Arial,sans-serif;letter-spacing:.18em}
+.film-chair b,.film-chair em{position:absolute;bottom:-5px;left:55px;width:4px;height:85px;background:#a88e64;transform-origin:bottom}.film-chair b{transform:rotate(37deg)}.film-chair em{transform:rotate(-37deg)}
+.hero-lanes .hero-lane.hero-lane--film-tv>*:not(.film-photo){position:relative!important;z-index:2!important}
