@@ -19,7 +19,6 @@ export default function Hero() {
       <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s practice">
         {LANES.map((lane) => (
           <button className={`hero-lane hero-lane--${lane.topic}`} type="button" onClick={() => openLane(lane)} key={lane.n}>
-            {lane.topic==="film-tv" && <div className="film-photo" aria-hidden="true"><span className="film-glow film-glow-a"/><span className="film-glow film-glow-b"/><span className="film-camera"><i/><b/><em/></span><span className="film-chair"><i>DIRECTOR</i><b/><em/></span></div>}
             <span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p><span className="hero-lane-learn">LEARN MORE <b>→</b></span>
           </button>
         ))}
