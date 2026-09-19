@@ -78,3 +78,8 @@ footer{background:#081923!important}
 .hero-lanes .hero-lane.hero-lane--film-tv{background-image:linear-gradient(90deg,rgba(3,16,24,.94) 0%,rgba(4,19,28,.55) 48%,rgba(4,19,28,.12) 100%),url('https://images.unsplash.com/photo-1727451139462-cd34008cd50b?auto=format&fit=crop&fm=jpg&q=82&w=1800')!important;background-position:center 50%!important;background-size:cover!important;background-repeat:no-repeat!important}
 .hero-lanes .hero-lane.hero-lane--film-tv:before{display:none!important}
 .film-photo{display:none!important}
+
+/* Hard-align all three Practice CTAs to the identical baseline */
+.hero-lanes .hero-lane{position:relative!important;padding-bottom:58px!important}
+.hero-lanes .hero-lane .hero-lane-learn{position:absolute!important;left:clamp(24px,2.8vw,44px)!important;bottom:20px!important;top:auto!important;right:auto!important;margin:0!important;transform:none!important;display:flex!important;align-items:center!important;gap:14px!important;z-index:5!important;line-height:1!important}
+.hero-lanes .hero-lane--film-tv .hero-lane-learn{left:clamp(24px,2.8vw,44px)!important;bottom:20px!important;top:auto!important}
