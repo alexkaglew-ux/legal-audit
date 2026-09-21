@@ -152,3 +152,13 @@ footer{background:#04131c!important}
 
 /* No decorative rule after More Than Just Law */
 .beyond-intro--compact .section-intro-label>span{display:none!important}
+
+/* Interactive About / Book / Course detail drawer */
+.publishing-cta{cursor:pointer;background:transparent}
+.publishing-detail{grid-column:1/4;position:relative;margin:22px 0 0;padding:26px clamp(22px,3vw,44px);border-top:1px solid var(--rule);background:#061b28}
+.publishing-detail h3{margin:8px 0 12px;color:var(--ivory);font:400 clamp(24px,2.3vw,36px)/1.05 Georgia,serif}
+.publishing-detail>p:not(.eyebrow){max-width:850px;margin:0 0 10px;color:#c9cecf;font-size:12px;line-height:1.6}
+.publishing-detail a{display:inline-block;margin-top:10px;color:var(--beige);font-size:8px;font-weight:800;letter-spacing:.15em;text-decoration:none}
+.publishing-detail-close{position:absolute;right:22px;top:22px;border:0;background:transparent;color:var(--beige);font-size:7px;font-weight:800;letter-spacing:.14em;cursor:pointer}
+@media(max-width:1050px){.publishing-detail{grid-column:1/3}}
+@media(max-width:700px){.publishing-detail{grid-column:1}}
