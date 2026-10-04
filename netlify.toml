@@ -6,6 +6,16 @@
 # akesq-v2 is the non-production review branch; production remains main.
 
 [[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/sports"
+  to = "/sports/"
+  status = 301
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
