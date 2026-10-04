@@ -2,8 +2,38 @@
   command = "npm run build"
   publish = "dist"
 
-# Branch deploy refresh: 2026-09-17
-# akesq-v2 is the non-production review branch; production remains main.
+# alexkagianaris.com is the practice/personal site.
+# Editorial publishing lives at sportslegalaudit.com.
+
+[[redirects]]
+  from = "/blog"
+  to = "https://sportslegalaudit.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/"
+  to = "https://sportslegalaudit.com/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mlb-labor-war-cba-reopener-explained"
+  to = "https://sportslegalaudit.com/latest/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/mlb-labor-war-cba-reopener-explained.html"
+  to = "https://sportslegalaudit.com/latest/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "https://sportslegalaudit.com/latest/"
+  status = 301
+  force = true
 
 [[redirects]]
   from = "/about"
