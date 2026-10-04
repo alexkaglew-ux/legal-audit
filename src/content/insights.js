@@ -11,7 +11,7 @@ export const WATCHING = [
     headline: "Jordan's NASCAR antitrust fight settled — without a signed charter.",
     significance:
       "23XI Racing and Front Row Motorsports proved a team can walk away from a league's standard agreement and still come out ahead.",
-    url: "/blog/ep038-jordan-nascar-antitrust-settlement.html",
+    url: "https://sportslegalaudit.com/latest/",
     status: "Explainer",
   },
   {
@@ -20,7 +20,7 @@ export const WATCHING = [
     headline: "Revenue-share era is colliding with existing NIL deals.",
     significance:
       "Athletes and families are seeing school revenue-share offers layered on top of collective NIL agreements, with cap and disclosure questions still shaking out.",
-    url: "/blog/",
+    url: "https://sportslegalaudit.com/latest/",
     status: "Watching",
   },
   {
@@ -29,7 +29,7 @@ export const WATCHING = [
     headline: "MLB's CBA reopener is the one cap fight that hasn't been settled by a lockout.",
     significance:
       "Every other North American salary cap traces back to a union loss. MLB's history is different, and that shapes the leverage on both sides.",
-    url: "/blog/mlb-labor-war-cba-reopener-explained.html",
+    url: "https://sportslegalaudit.com/latest/",
     status: "Developing",
   },
 ];
@@ -42,7 +42,7 @@ export const LATEST_ANALYSIS = [
     topic: "Antitrust",
     format: "video",
     source: "The Legal Audit",
-    url: "/blog/ep038-jordan-nascar-antitrust-settlement.html",
+    url: "https://sportslegalaudit.com/latest/",
     image: null,
     summary:
       "23XI Racing and Front Row Motorsports refused NASCAR's charter agreement and sued — and ended up ahead of every team that signed.",
@@ -84,7 +84,7 @@ export const LATEST_ANALYSIS = [
     topic: "Labor Law",
     format: "article",
     source: "The Legal Audit",
-    url: "/blog/mlb-labor-war-cba-reopener-explained.html",
+    url: "https://sportslegalaudit.com/latest/",
     image: null,
     summary:
       "Every North American cap traces back to a union losing a labor war. MLB's has never lost — yet.",
@@ -153,6 +153,6 @@ export const SPORTS_NIL_GROUPS = [
     title: "League / Governance / Rights Issues",
     description:
       "Editorial analysis of league, association, and governance developments shaping sports business and athlete rights.",
-    href: "/blog/",
+    href: "https://sportslegalaudit.com/latest/",
   },
 ];
