@@ -18,7 +18,7 @@ export const episodes = [
         title: "Michael Jordan Sued NASCAR for $364 Million. He Settled for Something Better.",
         topic: "Antitrust",
         summary: "23XI Racing and Front Row Motorsports refused NASCAR's charter agreement and sued — and ended up ahead of every team that signed.",
-        url: "/blog/ep038-jordan-nascar-antitrust-settlement.html"
+        url: "https://sportslegalaudit.com/latest/"
   },
   {
         number: "037",
