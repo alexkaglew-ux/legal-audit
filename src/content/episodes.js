@@ -7,9 +7,9 @@
 export const CURRENT_EPISODE_NUMBER = 38;
 
 export const CHANNELS = {
-    youtube: "https://www.youtube.com/@alexkagianaris",
-    youtubeLatest: "https://www.youtube.com/@alexkagianaris/videos",
-    instagram: "https://www.instagram.com/alexkagianaris.esq/",
+    youtube: "https://www.youtube.com/channel/UCawQ902E6uRDuF8RJO4oruA",
+    youtubeLatest: "https://www.youtube.com/channel/UCawQ902E6uRDuF8RJO4oruA/videos",
+    instagram: "https://www.instagram.com/sportslegalaudit/",
 };
 
 export const episodes = [
