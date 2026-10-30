@@ -8,4 +8,4 @@ import "./beyond-practice.css";
 import "./practice-detail.css";
 import "./lower-home.css";
 import "./identity-layer.css";
-ReactDOM.createRoot(document.getElementById("root")).render(<React.StrictMode><App /></React.StrictMode>);
+ReactDOM.hydrateRoot(document.getElementById("root"), <React.StrictMode><App /></React.StrictMode>);
