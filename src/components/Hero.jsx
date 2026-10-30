@@ -1,7 +1,7 @@
 const LANES = [
-  { n: "01", title: "SPORTS", copy: "Athletes, NIL, endorsements, team matters and the rules shaping today’s game.", topic: "sports" },
-  { n: "02", title: "MUSIC", copy: "Artists, talent, licensing, rights, commercial partnerships and the agreements behind the music.", topic: "music" },
-  { n: "03", title: "FILM / TV", copy: "Development, rights, talent, production, licensing and the business affairs behind the camera.", topic: "film-tv" },
+  { n: "01", title: "SPORTS", copy: "Athletes, NIL, endorsements, team matters and the rules shaping today’s game.", topic: "sports", href:"/sports/" },
+  { n: "02", title: "MUSIC", copy: "Artists, talent, licensing, rights, commercial partnerships and the agreements behind the music.", topic: "music", href:"/music/" },
+  { n: "03", title: "FILM / TV", copy: "Development, rights, talent, production, licensing and the business affairs behind the camera.", topic: "film-tv", href:"/film-tv/" },
 ];
 
 function openLane(lane) {
@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s practice">
         {LANES.map((lane) => (
           <button className={`hero-lane hero-lane--${lane.topic}`} type="button" onClick={() => openLane(lane)} key={lane.n}>
-            <div className="hero-lane-content"><span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p></div><div className="hero-lane-action">LEARN MORE <b>→</b></div>
+            <div className="hero-lane-content"><span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p></div><a className="hero-lane-action" href={lane.href} onClick={e=>e.stopPropagation()}>LEARN MORE <b>→</b></a>
           </button>
         ))}
       </div>
