@@ -18,9 +18,9 @@ export default function Hero() {
       </div>
       <div className="hero-lanes" id="practice" aria-label="Explore Alex Kagianaris, Esq.'s practice">
         {LANES.map((lane) => (
-          <button className={`hero-lane hero-lane--${lane.topic}`} type="button" onClick={() => openLane(lane)} key={lane.n}>
-            <div className="hero-lane-content"><span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p></div><a className="hero-lane-action" href={lane.href} onClick={e=>e.stopPropagation()}>LEARN MORE <b>→</b></a>
-          </button>
+          <a className={`hero-lane hero-lane--${lane.topic}`} href={lane.href} key={lane.n}>
+            <div className="hero-lane-content"><span className="hero-lane-number">{lane.n}</span><strong>{lane.title}</strong><p>{lane.copy}</p></div><span className="hero-lane-action">LEARN MORE <b>→</b></span>
+          </a>
         ))}
       </div>
       <div className="hero-ticker" aria-hidden="true">
